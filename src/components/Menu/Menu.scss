@@ -1,0 +1,7 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.menu{
+    @include flex-col;
+    gap: 10px;
+}

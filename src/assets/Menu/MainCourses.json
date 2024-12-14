@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Salade grecque",
+        "price": "12",
+        "description": "Salade traditionnelle grecque",
+        "content": "salade verte, tomate, olive, feta",
+        "allergens": "lait"
+    },
+    {
+        "id": 2,
+        "name": "Dakos",
+        "price": "10",
+        "description": "Biscotte avec des tomates cerise et de la feta",
+        "content": "biscotte, tomate, feta",
+        "allergens": "gluten, lait"
+    },
+    {
+        "id": 3,
+        "name": "Moussaka",
+        "price": "18",
+        "description": "Gratin d'aubergines et de viande hachée",
+        "content": "aubergine, viande hachée, béchamel, pomme de terre",
+        "allergens": "lait, gluten"
+    },
+    {
+        "id": 4,
+        "name": "Souvlaki",
+        "price": "15",
+        "description": "Brochettes de viande marinée grillée",
+        "content": "porc, poulet, tomates, oignons, pita",
+        "allergens": "gluten"
+    },
+    {
+        "id": 5,
+        "name": "Tzatziki",
+        "price": "6",
+        "description": "Sauce à base de yaourt, concombre et ail",
+        "content": "yaourt, concombre, ail, huile d'olive, citron",
+        "allergens": "lait"
+    },
+    {
+        "id": 6,
+        "name": "Spanakopita",
+        "price": "14",
+        "description": "Pâtisserie à la pâte filo avec épinards et feta",
+        "content": "épinards, feta, pâte filo",
+        "allergens": "gluten, lait"
+    },
+    {
+        "id": 7,
+        "name": "Pastitsio",
+        "price": "17",
+        "description": "Gratin de pâtes à la viande hachée",
+        "content": "pâtes, viande hachée, béchamel, fromage râpé",
+        "allergens": "gluten, lait"
+    },
+    {
+        "id": 8,
+        "name": "Feta Saganaki",
+        "price": "12",
+        "description": "Fromage feta frit",
+        "content": "feta, farine, huile d'olive",
+        "allergens": "lait, gluten"
+    },
+    {
+        "id": 9,
+        "name": "Bougatsa",
+        "price": "8",
+        "description": "Pâtisserie grecque sucrée ou salée",
+        "content": "crème pâtissière ou viande, pâte filo",
+        "allergens": "gluten, lait"
+    },
+    {
+        "id": 10,
+        "name": "Kalamari frits",
+        "price": "16",
+        "description": "Calamars frits avec sauce citronnée",
+        "content": "calamars, farine, huile d'olive",
+        "allergens": "gluten, fruits de mer"
+    }
+]

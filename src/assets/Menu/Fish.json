@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Kalamari frits",
+        "price": "16",
+        "description": "Calamars frits avec sauce citronnée",
+        "content": "calamars, farine, huile d'olive",
+        "allergens": "gluten, fruits de mer"
+    },
+    {
+        "id": 2,
+        "name": "Poisson grillé",
+        "price": "20",
+        "description": "Poisson grillé à l'huile d'olive et aux herbes",
+        "content": "poisson frais, herbes, citron, huile d'olive",
+        "allergens": "poisson"
+    },
+    {
+        "id": 3,
+        "name": "Chorba de poisson",
+        "price": "14",
+        "description": "Soupe de poisson grecque aux tomates et herbes",
+        "content": "poisson, tomates, oignon, herbes",
+        "allergens": "poisson"
+    },
+    {
+        "id": 4,
+        "name": "Gavros Marinés",
+        "price": "12",
+        "description": "Anchois marinés dans de l'huile d'olive et du vinaigre",
+        "content": "anchois, huile d'olive, vinaigre",
+        "allergens": "poisson"
+    },
+    {
+        "id": 5,
+        "name": "Sagani Poisson",
+        "price": "22",
+        "description": "Poisson frit accompagné de légumes grillés",
+        "content": "poisson, légumes grillés, huile d'olive",
+        "allergens": "poisson"
+    }
+]

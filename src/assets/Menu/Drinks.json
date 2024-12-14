@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Bière blonde",
+        "price": "3",
+        "description": "Bière blonde du moment, consulter le personnel de service pour en savoir plus.",
+        "content": "malte, houblon"
+    },
+    {
+        "id": 2,
+        "name": "Bière rouge",
+        "price": "3",
+        "description": "Mort Subite rouge, arôme cerise.",
+        "content": "malte, cerise"
+    },
+    {
+        "id": 3,
+        "name": "Ouzo traditionnel",
+        "price": "5",
+        "description": "Apéritif anisé grec, servi avec des glaçons.",
+        "content": "anis, eau"
+    },
+    {
+        "id": 4,
+        "name": "Vin blanc - Assyrtiko",
+        "price": "4",
+        "description": "Vin blanc sec typique de l'île de Santorin.",
+        "content": "cépages grecs"
+    },
+    {
+        "id": 5,
+        "name": "Vin rouge - Agiorgitiko",
+        "price": "4",
+        "description": "Vin rouge généreux aux notes de fruits rouges et épices.",
+        "content": "cépages grecs"
+    },
+    {
+        "id": 6,
+        "name": "Frappe glacé",
+        "price": "3",
+        "description": "Café froid grec, légèrement sucré et mousseux.",
+        "content": "café, sucre, lait (optionnel)"
+    },
+    {
+        "id": 7,
+        "name": "Jus d'orange pressé",
+        "price": "3",
+        "description": "Jus d'orange fraîchement pressé, sans additifs.",
+        "content": "oranges fraîches"
+    },
+    {
+        "id": 8,
+        "name": "Limonade maison",
+        "price": "2.5",
+        "description": "Limonade rafraîchissante au citron frais.",
+        "content": "citron, eau, sucre"
+    },
+    {
+        "id": 9,
+        "name": "Eau minérale",
+        "price": "1.5",
+        "description": "Bouteille d'eau minérale fraîche.",
+        "content": "eau minérale"
+    },
+    {
+        "id": 10,
+        "name": "Tsipouro",
+        "price": "5",
+        "description": "Digestif grec à base de marc de raisin, similaire au raki.",
+        "content": "marc de raisin"
+    }
+]

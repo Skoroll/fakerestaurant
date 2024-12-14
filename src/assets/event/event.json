@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Fermeture d'hivers",
+        "date": "24/12 - 25/12",
+        "desc": "Nous serons fermé le 24 et 25 décembre, passez de bonne fêtes"
+
+    },
+
+    {
+        "id": 2,
+        "name": "Anniversaire",
+        "date": "8/5/2025",
+        "desc": "Venez fêter les 10 ans du restaurant avec nous. -30% sur votre addition ce jour là."
+
+    }
+]

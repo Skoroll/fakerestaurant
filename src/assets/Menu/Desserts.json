@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Baklava",
+        "price": "8",
+        "description": "Pâtisserie grecque à base de pâte filo, miel et noix",
+        "content": "pâte filo, miel, noix, cannelle",
+        "allergens": "gluten, fruits à coque"
+    },
+    {
+        "id": 2,
+        "name": "Loukoumades",
+        "price": "7",
+        "description": "Beignets grecs arrosés de miel et de sucre glace",
+        "content": "farine, levure, miel, sucre",
+        "allergens": "gluten"
+    },
+    {
+        "id": 3,
+        "name": "Galaktoboureko",
+        "price": "9",
+        "description": "Pâtisserie à la crème pâtissière enveloppée dans de la pâte filo",
+        "content": "crème pâtissière, pâte filo, miel",
+        "allergens": "gluten, lait"
+    },
+    {
+        "id": 4,
+        "name": "Riz au lait grec",
+        "price": "6",
+        "description": "Dessert à base de riz et de lait, parfumé à la cannelle",
+        "content": "riz, lait, sucre, cannelle",
+        "allergens": "lait"
+    },
+    {
+        "id": 5,
+        "name": "Kataifi",
+        "price": "10",
+        "description": "Dessert grec à base de pâte kataifi, noix et miel",
+        "content": "pâte kataifi, noix, miel",
+        "allergens": "gluten, fruits à coque"
+    }
+]

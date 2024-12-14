@@ -1,0 +1,32 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+.collapse{
+    border: 1px solid;
+    &__heading{
+        @include flex-row;
+        align-items: baseline;
+        gap: $gap-base;
+        padding: $padding-elem;
+        
+        h3{
+            margin: 0;
+        }
+    }
+
+    &__content{
+        padding: $padding-elem;
+        @include flex-col;
+        gap: $gap-base;
+        h4, p{
+            margin: 0;
+        }
+
+        
+    }
+}
+
+.open{
+    height: auto;
+    opacity: 100%;
+    transition: height 0.3 ease;
+}

@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@mixin ul-reset{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin btn-base{
+    cursor: pointer;
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    padding: $padding-elem;
+    color: $background-color;
+    transition: background-color 0.3s, border-radius 0.3s, color 0.3s;
+    
+    &:hover{
+        background-color: $background-color;
+        border-radius: 5px;
+        color: black;
+    }
+}

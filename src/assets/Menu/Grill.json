@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Souvlaki",
+        "price": "15",
+        "description": "Brochettes de viande marinée grillée",
+        "content": "porc, poulet, tomates, oignons, pita",
+        "allergens": "gluten"
+    },
+    {
+        "id": 2,
+        "name": "Bifteki",
+        "price": "16",
+        "description": "Burger grec avec viande hachée d'agneau",
+        "content": "viande d'agneau, oignon, herbes, pita",
+        "allergens": "gluten"
+    },
+    {
+        "id": 3,
+        "name": "Kebab",
+        "price": "14",
+        "description": "Viande grillée servie avec légumes et pita",
+        "content": "viande de boeuf, légumes grillés, pita",
+        "allergens": "gluten"
+    },
+    {
+        "id": 4,
+        "name": "Moussaka",
+        "price": "18",
+        "description": "Gratin d'aubergines et de viande hachée",
+        "content": "aubergine, viande hachée, béchamel, pomme de terre",
+        "allergens": "lait, gluten"
+    },
+    {
+        "id": 5,
+        "name": "Kotopoulo Skaras",
+        "price": "17",
+        "description": "Poulet mariné grillé",
+        "content": "poulet, citron, herbes, huile d'olive",
+        "allergens": ""
+    }
+]

@@ -1,0 +1,33 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+
+.header{
+    @include flex-row;
+    align-items: baseline;
+    padding: $padding-elem;
+}
+
+.nav{
+    position: relative;
+    margin: auto 0 auto auto;
+    &__ul{
+
+        @include flex-row;
+        @include ul-reset;
+        gap: $gap-base;
+    }
+
+    &__menu-ul{
+        position: absolute;
+        @include flex-col;
+        @include ul-reset;
+        gap: 5px;
+        z-index: 56;
+        margin-top: 5px;
+    }
+}
+
+.nav-btn{
+    @include btn-base;
+}
