@@ -1,0 +1,33 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.reservation, form, label{
+    @include flex-col;
+    
+}
+
+
+.reservation{
+    form{
+        label{
+            font-weight: 600;
+        }
+        padding: $padding-elem;
+        gap: calc($gap-base /2);
+       input, select{
+        background: none;
+        border: none
+       }
+        input[type=submit]{
+            @include btn-base;
+        }
+    }
+
+    .form-recap{
+        text-align: center;
+        p{
+            margin: 0;
+            font-size: 17px;
+        }
+    }
+}

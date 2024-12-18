@@ -1,25 +1,31 @@
 import React, { useRef, useState, useEffect } from "react";
+import Reservation from "../../Reservation/Reservation";
+import Modal from "../../Modal/Modal";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const onMenu = useRef<HTMLLIElement>(null); // Utilisez HTMLLIElement ici car on l'applique à un <li>
+  const [modalOpen, setModalOpen] = useState(false);
+  const onMenu = useRef<HTMLLIElement>(null);
 
-  // Fonction pour changer l'état du menu lorsque l'utilisateur clique sur le bouton
+  // Fonction pour changer l'état du menu
   const handleMenu = (e: React.MouseEvent) => {
-    // Vérifier si l'événement a été déclenché par le bouton "Menu"
     if (onMenu.current && onMenu.current.contains(e.target as Node)) {
       setMenuOpen(!menuOpen);
     }
   };
 
-  // Fonction pour fermer le menu si on clique en dehors de celui-ci
+  // Fonction pour ouvrir/fermer la modale
+  const toggleModal = () => {
+    setModalOpen((prevState) => !prevState);
+  };
+
+  // Fonction pour fermer le menu si clic en dehors
   const handleClickOutside = (e: MouseEvent) => {
     if (onMenu.current && !onMenu.current.contains(e.target as Node)) {
-      setMenuOpen(false);  // Fermer le menu si le clic est en dehors
+      setMenuOpen(false);
     }
   };
 
-  // Ajout d'un écouteur d'événements pour détecter un clic en dehors du menu
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -29,18 +35,31 @@ function Nav() {
 
   return (
     <nav className="nav">
+      {/* Affichage conditionnel de la modale */}
+      {modalOpen && (
+        <Modal onClose={toggleModal}>
+          <Reservation />
+        </Modal>
+      )}
+
       <ul className="nav__ul">
         <li
           className="nav-btn"
-          ref={onMenu} // Référence sur le bouton "Menu" pour détecter les clics dessus
+          ref={onMenu}
           onClick={handleMenu}
         >
           Menu
         </li>
-        <li className="nav-btn">Réservation</li>
+        <li
+          className="nav-btn"
+          onClick={toggleModal}
+        >
+          Réservation
+        </li>
         <li className="nav-btn">Contact</li>
       </ul>
 
+      {/* Menu déroulant conditionnel */}
       {menuOpen && (
         <div>
           <ul className="nav__menu-ul">

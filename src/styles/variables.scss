@@ -6,10 +6,10 @@ $secondary-color: #E2C16E;
 $background-color: #F5F5F5;
 $dark-gray: #444444;
 $olive-green: #8A9A5B;
-
+$border-color: rgb(233, 233, 233);
 /* Autres couleurs optionnelles */
 $blue-mediterranean: #006F8E;
-$white-soft: #F5F5F5;
+$text-light: #F5F5F5;
 $gold-soft: #D6A63A;
 $gray-light: #B0B0B0;
 
@@ -18,3 +18,7 @@ $gray-light: #B0B0B0;
 $gap-base : 20px;
 $padding-page : 20px;
 $padding-elem : 10px 15px;
+
+//Border
+$border: 1px solid;
+$border-radius: 15px;

@@ -1,0 +1,36 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+
+.modal{
+    @include flex-col;
+    position: fixed;
+    top: 0px;
+    right: -15px;
+    background: rgba(0, 0, 0, 0.336);
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+
+    &__content{
+        position: relative;
+        width: 350px;
+        height: 500px;
+        margin: auto;
+        z-index: 999;
+        background-color: $background-color;
+        border-radius: $border-radius;
+        padding: $padding-elem;
+
+        .fa-x{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+}
