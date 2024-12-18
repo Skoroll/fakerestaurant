@@ -2,12 +2,17 @@
 @import "../../styles/variables.scss";
 .collapse{
     border: 1px solid;
+    border-radius: $border-radius;
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
     &__heading{
         @include flex-row;
         align-items: baseline;
         gap: $gap-base;
         padding: $padding-elem;
-        
+
         h3{
             margin: 0;
         }
@@ -17,6 +22,9 @@
         padding: $padding-elem;
         @include flex-col;
         gap: $gap-base;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
         h4, p{
             margin: 0;
         }
@@ -26,7 +34,11 @@
 }
 
 .open{
-    height: auto;
-    opacity: 100%;
-    transition: height 0.3 ease;
+    max-height: 2000px; 
+    opacity: 1;
+
+    & .collapse__content {
+        opacity: 1;
+    }
+
 }
