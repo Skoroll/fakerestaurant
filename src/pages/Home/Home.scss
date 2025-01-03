@@ -1,0 +1,60 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+
+.home{
+    position: relative;
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        padding:  $padding-elem;
+        margin-top: 15px;
+        gap: $gap-base;
+        width: 100%;
+        @media (min-width: 1250px){
+            flex-direction: row;
+            border: $border $main-color;
+            border-radius: $border-radius;
+        }
+        
+        .subtitle{
+            font-size: 30px;
+        }
+
+        .leaflet-container{
+            width: 100% !important;
+            @media (min-width: 1250px){
+                width: 50% !important;
+            }
+        }
+
+    }
+    &__group{
+        position: relative;
+        height: $bannerMobile;
+
+        @media (min-width: 1250px){
+            height: $bannerDesktop;
+        }
+        &--bg{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.274);
+            
+            h1, h2{
+                color: white;
+                border: none;
+            }
+        }
+    }
+
+    &__events{
+        margin: 20px 0;
+        border-bottom: $border $main-color;
+        padding: $padding-elem;
+
+    }
+}

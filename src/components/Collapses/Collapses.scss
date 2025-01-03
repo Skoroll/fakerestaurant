@@ -4,14 +4,15 @@
     border: 1px solid;
     border-radius: $border-radius;
     max-height: 50px;
-    overflow: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease;
+    visibility: visible !important;
 
     &__heading{
         @include flex-row;
         align-items: baseline;
         gap: $gap-base;
         padding: $padding-elem;
+        cursor: pointer;
 
         h3{
             margin: 0;
@@ -24,6 +25,7 @@
         gap: $gap-base;
         opacity: 0;
         transition: opacity 0.3s ease;
+        
 
         h4, p{
             margin: 0;

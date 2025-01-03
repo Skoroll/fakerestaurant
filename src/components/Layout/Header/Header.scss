@@ -3,14 +3,34 @@
 
 
 .header{
-    @include flex-row;
+    @include flex-col;
     align-items: baseline;
     padding: $padding-elem;
+    @media (min-width: 1024px){
+        @include flex-row;
+    }
+
+    img{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+
+        @media (min-width: 1024px){
+            width: 70px;
+            height: 70px;
+            margin: 0;
+        }
+    }
 }
 
 .nav{
     position: relative;
-    margin: auto 0 auto auto;
+    margin:  auto;
+
+    @media (min-width: 1024px){
+        margin: auto 0 auto auto;
+    }
+
     &__ul{
 
         @include flex-row;

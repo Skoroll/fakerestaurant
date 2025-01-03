@@ -2,23 +2,42 @@ import "./Reservation.scss";
 import React, { useState } from "react";
 
 function Reservation() {
-    // État pour stocker les données du formulaire
     const [form, setForm] = useState({
         lastName: "",
         firstName: "",
         date: "",
         hour: "",
-        chair: "1", // Valeur par défaut pour le champ chair
+        chair: "1",
+        message: ""
     });
 
-    // Gestionnaire de modification des champs du formulaire
-    const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    // Détermine si la date est un week-end
+    const isWeekend = (dateString: string) => {
+        const date = new Date(dateString);
+        const day = date.getDay(); // 0 = dimanche, 6 = samedi
+        return day === 0 || day === 6;
+    };
+
+    // Récupère les limites d'heures en fonction de la date
+    const getHourLimits = (date: string) => {
+        if (isWeekend(date)) {
+            return { min: "11:00", max: "00:00" };
+        }
+        return { min: "11:00", max: "23:30" };
+    };
+
+    const handleFormChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    ) => {
         const { id, value } = e.target;
         setForm((prevForm) => ({
             ...prevForm,
             [id]: value,
         }));
     };
+    
+
+    const hourLimits = getHourLimits(form.date);
 
     return (
         <div className="reservation">
@@ -26,7 +45,7 @@ function Reservation() {
 
             <form
                 onSubmit={(e) => {
-                    e.preventDefault(); // Empêche le rechargement de la page
+                    e.preventDefault();
                     console.log("Formulaire soumis : ", form);
                 }}
             >
@@ -36,7 +55,7 @@ function Reservation() {
                         type="text"
                         id="lastName"
                         value={form.lastName}
-                        onChange={handleFormChange} // Met à jour l'état
+                        onChange={handleFormChange}
                     />
                 </label>
 
@@ -46,7 +65,7 @@ function Reservation() {
                         type="text"
                         id="firstName"
                         value={form.firstName}
-                        onChange={handleFormChange} // Met à jour l'état
+                        onChange={handleFormChange}
                     />
                 </label>
 
@@ -55,17 +74,13 @@ function Reservation() {
                     <select
                         id="chair"
                         value={form.chair}
-                        onChange={handleFormChange} // Met à jour l'état
+                        onChange={handleFormChange}
                     >
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
+                        {Array.from({ length: 9 }, (_, i) => (
+                            <option key={i + 1} value={i + 1}>
+                                {i + 1}
+                            </option>
+                        ))}
                     </select>
                 </label>
 
@@ -75,7 +90,7 @@ function Reservation() {
                         type="date"
                         id="date"
                         value={form.date}
-                        onChange={handleFormChange} // Met à jour l'état
+                        onChange={handleFormChange}
                     />
                 </label>
 
@@ -85,21 +100,41 @@ function Reservation() {
                         type="time"
                         id="hour"
                         value={form.hour}
-                        onChange={handleFormChange} // Met à jour l'état
+                        min={hourLimits.min}
+                        max={hourLimits.max}
+                        onChange={handleFormChange}
+                        disabled={!form.date} // Désactive le champ si la date n'est pas sélectionnée
+                    />
+                </label>
+
+                <label htmlFor="message">
+                    Remarque
+                    <textarea
+                        id="message"
+                        value={form.message}
+                        onChange={handleFormChange}
                     />
                 </label>
 
                 <input type="submit" value="Réserver" />
             </form>
+
             <div className="form-recap">
                 <h3>Votre réservation :</h3>
                 <p>
+                    Votre nom : <br />
                     <span>{form.lastName}</span> <span>{form.firstName}</span>
                 </p>
                 <p>
-                    {form.date} {form.hour}
+                    {form.date}
+                    <br />
+                    {form.hour}
                 </p>
                 <p>Couverts pour {form.chair}</p>
+                <p>
+                    Observation : <br />
+                    <span>{form.message}</span>
+                </p>
             </div>
         </div>
     );

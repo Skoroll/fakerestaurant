@@ -1,0 +1,59 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.info {
+    @include flex-col;
+    padding: $padding-page;
+    border: $border $main-color;
+    width: 100%;
+    background: $border-color;
+    border-radius: $border-radius;
+    justify-content: space-between;
+
+    @media (min-width: 1250px) {
+        border: none;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .info__list{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    @media (min-width: 1250px) {
+        width: 50%;
+    }
+
+    .opening-day{
+        font-weight: 600;
+        padding: $padding-elem;
+        text-decoration: underline;
+    }
+
+    ul {
+        padding: $padding-elem !important;
+
+        span {
+            font-weight: 800;
+        }
+    }
+    button{
+        @include btn-base;
+        width: 100%;
+        border-radius: $border-radius;
+    }
+
+    .about-reservation{
+        font-weight: 600;
+        padding: $padding-elem;
+        text-align: center;
+
+    }
+    .division{
+        padding: $padding-elem;
+    }
+}

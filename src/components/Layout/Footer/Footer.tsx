@@ -23,7 +23,7 @@ const Footer = () => {
 
             <div className="footer__section">
             <div className="footer__section--copyright">
-                <p>© 2024 Aegean Sea - Crée par Skorol</p>
+                <p>© 2024 Greek Taverna - Crée par Skorol</p>
             </div>
             <div className="footer__section--mentions">
                 <p><span>Mention Légale</span>, <span>CGU</span>,<span>Politique de confidentialité</span> </p>
